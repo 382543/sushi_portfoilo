@@ -8,7 +8,7 @@ function App() {
 
   const roleVariants = [
     { line1: 'Full Stack', line2: 'Developer' },
-    { line1: 'AI-ML / Data Science', line2: 'Engineer' },
+    { line1: 'AI / Data Science', line2: 'Engineer' },
   ]
 
   const [roleIndex, setRoleIndex] = useState(0)
@@ -445,7 +445,6 @@ function App() {
               <div className="education-content">
                 <h3>{item.school}</h3>
                 <p>{item.degree}</p>
-                <strong>{item.detail}</strong>
                 <span>{item.duration}</span>
               </div>
             </article>

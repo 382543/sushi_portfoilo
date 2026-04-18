@@ -2198,6 +2198,221 @@ li,
   background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
 }
 
+/* 2026 visual refresh */
+:root {
+  --sun: #f4b400;
+  --coral: #e96f5b;
+  --sea: #0f766e;
+  --mint: #ccfbf1;
+  --ink: #1f2937;
+  --paper: #fffaf0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 0%, rgba(244, 180, 0, 0.2) 0%, rgba(244, 180, 0, 0) 30%),
+    radial-gradient(circle at 90% 12%, rgba(15, 118, 110, 0.2) 0%, rgba(15, 118, 110, 0) 34%),
+    linear-gradient(180deg, #fff8ed 0%, #fffefb 52%, #f7fffd 100%);
+  color: var(--ink);
+}
+
+#root {
+  border-inline: 1px solid rgba(31, 41, 55, 0.12);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(2px);
+}
+
+.topbar {
+  border-bottom: 1px solid rgba(31, 41, 55, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 248, 237, 0.9) 100%);
+  backdrop-filter: blur(6px);
+}
+
+.hero-nav-link {
+  color: #11382f;
+  font-weight: 700;
+}
+
+.hero-nav-link:hover {
+  color: var(--coral);
+}
+
+.hero-nav-link::after {
+  background: linear-gradient(90deg, var(--coral) 0%, var(--sun) 100%);
+}
+
+.showcase {
+  min-height: clamp(460px, 58vw, 700px);
+  background:
+    radial-gradient(circle at 75% 12%, rgba(233, 111, 91, 0.18) 0%, rgba(233, 111, 91, 0) 35%),
+    radial-gradient(circle at 22% 80%, rgba(15, 118, 110, 0.18) 0%, rgba(15, 118, 110, 0) 34%),
+    linear-gradient(180deg, #fff8ec 0%, #fffef9 56%, #f3fffb 100%);
+}
+
+.blob {
+  border-radius: 44% 56% 62% 38% / 45% 42% 58% 55%;
+  background: linear-gradient(135deg, #f88f6e 0%, #ea6f5b 44%, #0f766e 100%);
+  box-shadow: 0 24px 60px rgba(15, 118, 110, 0.3);
+}
+
+.showcase-name {
+  color: #fffaf1;
+  letter-spacing: 0.02em;
+}
+
+.showcase-left,
+.showcase-right {
+  color: #1f4f44;
+}
+
+.about-section,
+.projects-section,
+.education-section,
+.skills-section,
+.certificate-section,
+.research-section,
+.contact-section-unique,
+.coding-section {
+  border-top: 1px solid rgba(31, 41, 55, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 251, 243, 0.9) 100%);
+}
+
+.about-highlight-card,
+.about-expertise-card,
+.education-card,
+.project-card,
+.certificate-card,
+.research-spotlight,
+.skill-matrix-card,
+.coding-metric,
+.coding-card,
+.contact-card {
+  border: 1px solid rgba(31, 41, 55, 0.11);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fffaf0 100%);
+  box-shadow: 0 12px 34px rgba(24, 32, 45, 0.11);
+}
+
+.about-highlight-card:hover,
+.about-expertise-card:hover,
+.education-card:hover,
+.project-card:hover,
+.certificate-card:hover,
+.research-spotlight:hover,
+.skill-matrix-card:hover,
+.coding-card:hover,
+.contact-card:hover,
+.coding-metric:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(15, 118, 110, 0.18);
+}
+
+.about-eyebrow,
+.education-eyebrow,
+.certificate-eyebrow,
+.research-eyebrow,
+.skills-eyebrow,
+.coding-eyebrow {
+  border: 1px solid rgba(15, 118, 110, 0.24);
+  background: #f0fdf9;
+  color: var(--sea);
+}
+
+.about-intro h2,
+.education-hero h2,
+.certificate-header h2,
+.research-banner h2,
+.skills-hero h2,
+.coding-header h2,
+.contact-card h2 {
+  color: #11382f;
+}
+
+.education-marker {
+  background: linear-gradient(180deg, #0f766e 0%, #155e75 100%);
+}
+
+.skill-card-icon,
+.coding-card-icon {
+  color: var(--sea);
+  background: #e6fffa;
+  border-color: rgba(15, 118, 110, 0.25);
+}
+
+.skill-row {
+  background: #fffef9;
+  border: 1px solid rgba(31, 41, 55, 0.1);
+}
+
+.project-links .project-link,
+.project-card .project-link,
+.certificate-card a,
+.research-spotlight a {
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.project-links .project-link-github,
+.project-card .project-link-github {
+  background: var(--sea);
+  border-color: #115e59;
+}
+
+.project-links .project-link-github:hover,
+.project-card .project-link-github:hover {
+  background: #115e59;
+}
+
+.project-links .project-link-live,
+.project-card .project-link-live,
+.certificate-card a,
+.research-spotlight a {
+  background: #fff4dd;
+  border: 1px solid #e9b949;
+  color: #6a4a0b;
+}
+
+.project-links .project-link-live:hover,
+.project-card .project-link-live:hover,
+.certificate-card a:hover,
+.research-spotlight a:hover {
+  background: #ffe9bf;
+  color: #4f3808;
+  border-color: #d39b26;
+}
+
+.coding-card-orange {
+  background: linear-gradient(180deg, #fff7ea 0%, #fff3dc 100%);
+}
+
+.coding-card-blue {
+  background: linear-gradient(180deg, #ecfffa 0%, #ddfdf6 100%);
+}
+
+.coding-card-slate {
+  background: linear-gradient(180deg, #f6f8fa 0%, #edf2f7 100%);
+}
+
+.coding-card-violet {
+  background: linear-gradient(180deg, #fff3ef 0%, #ffe8df 100%);
+}
+
+.coding-card-arrow {
+  color: var(--sea);
+  border-color: rgba(15, 118, 110, 0.25);
+}
+
+@media (max-width: 980px) {
+  .showcase {
+    min-height: 680px;
+    padding-bottom: 26px;
+  }
+
+  .contact-card {
+    border-radius: 20px;
+  }
+}
+
 .coding-card-green {
   background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
 }
