@@ -1,0 +1,47 @@
+:root {
+  --font-body: 'Poppins', 'Segoe UI', sans-serif;
+  --font-head: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #161616;
+  background: #ffffff;
+  min-height: 100svh;
+}
+
+#root {
+  width: min(1700px, 100%);
+  margin: 0 auto;
+  border-inline: 1px solid #d8d8d8;
+  overflow-x: clip;
+  overflow-y: visible;
+  background: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  color: #111;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.65;
+}
