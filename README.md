@@ -1,20 +1,80 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
 # sushi_portfoilo
+
+A personal portfolio website built with React, Vite, and React Router.
+
+## Tech Stack
+
+- React 19
+- Vite
+- React Router DOM
+- CSS (custom styling and animations)
+
+## Pages
+
+- Home
+- About me
+- Education
+- Projects
+- Skills
+- Certificate
+- Coding Platform
+- Research
+- Keep in Touch
+
+## Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:382543/sushi_portfoilo.git
+cd sushi_portfoilo
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
+
+```bash
+npm run dev
+```
+
+4. Open in browser:
+
+```text
+http://localhost:5173
+```
+
+## Scripts
+
+- `npm run dev` - start local development server
+- `npm run build` - create production build in `dist/`
+- `npm run preview` - preview production build locally
+- `npm run lint` - run ESLint checks
+
+## Project Structure
+
+```text
+myportfoil/
+	public/
+	src/
+		assets/
+		App.jsx
+		App.css
+		main.jsx
+		index.css
+	index.html
+	package.json
+	vite.config.js
+```
+
+## Build Output
+
+After running `npm run build`, production files are generated inside `dist/`.
+
+## License
+
+This project is for personal portfolio use.
