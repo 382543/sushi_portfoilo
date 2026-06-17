@@ -2,6 +2,21 @@
 
 A personal portfolio website built with React, Vite, and React Router.
 
+## About Me
+
+I am Sushila Yerukula, a Computer Science student focused on Data Science, AI/ML, and Full-Stack Development.
+
+I enjoy building practical projects that combine machine learning with clean and user-friendly web interfaces.
+My work includes predictive analytics, fraud detection research, and web applications using modern frontend and backend tools.
+
+### Core Focus
+
+- Data Science and Machine Learning
+- AI/NLP and Computer Vision fundamentals
+- React-based frontend development
+- FastAPI and API-driven backend integration
+- Real-world problem solving through end-to-end projects
+
 ## Tech Stack
 
 - React 19

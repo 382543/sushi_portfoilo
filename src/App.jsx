@@ -8,7 +8,7 @@ function App() {
 
   const roleVariants = [
     { line1: 'Full Stack', line2: 'Developer' },
-    { line1: 'AI / Data Science', line2: 'Engineer' },
+    { line1: 'AI ', line2: 'Engineer' },
   ]
 
   const [roleIndex, setRoleIndex] = useState(0)
@@ -36,23 +36,37 @@ function App() {
 
   const aboutHighlights = [
     { label: 'Education', value: 'B.Tech CSE, VIT Andhra Pradesh' },
-    { label: 'Focus', value: 'Data Science + Web Development' },
+    { label: 'Focus', value: 'Ai Engineer + Web Development' },
     { label: 'Research', value: 'Published paper in fraud detection' },
     { label: 'Certification', value: 'Oracle Cloud, UI/UX, Android Dev' },
   ]
 
-  const aboutExpertise = [
-    {
-      title: 'Core Expertise',
-      text: 'Building intelligent systems with TensorFlow and OpenCV, analyzing data with Power BI and Tableau, and developing scalable web applications with React and FastAPI.',
-      items: ['TensorFlow', 'OpenCV', 'Power BI', 'Tableau', 'React.js', 'FastAPI'],
-    },
-    {
-      title: 'Engineering Stack',
-      text: 'Full-stack development and deployment across front end, backend, databases, and cloud tooling.',
-      items: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'AWS EC2', 'Vercel'],
-    },
-  ]
+ const aboutExpertise = [
+  {
+    title: 'AI Agent Engineering',
+    text: 'Designing intelligent AI agents using LLMs, RAG pipelines, tool calling, workflow orchestration, memory systems, and autonomous reasoning to solve real-world problems.',
+    items: [
+      'AI Agents',
+      'RAG',
+      'LangChain',
+      'LLMs',
+      'Vector Databases',
+      'Prompt Engineering'
+    ],
+  },
+  {
+    title: 'Full Stack Development',
+    text: 'Building scalable end-to-end web applications with modern frontend frameworks, backend APIs, databases, and cloud deployment solutions.',
+    items: [
+      'React.js',
+      'FastAPI',
+      'Node.js',
+      'MySQL',
+      'AWS',
+      'Vercel'
+    ],
+  },
+];
 
   const education = [
     {
@@ -67,107 +81,111 @@ function App() {
     },
   ]
 
-  const skillGroups = [
-    {
-      label: 'Programming Languages',
-      icon: '</>',
-      summary: 'Core languages for systems, analysis, and application development.',
-      items: [
-        { name: 'Python', level: 'Advanced' },
-        { name: 'React.js', level: 'Advanced' },
-        { name: 'JavaScript', level: 'Advanced' },
-        { name: 'SQL', level: 'Advanced' },
-      ],
-    },
-    {
-      label: 'Web Development',
-      icon: '⌂',
-      summary: 'Frontend and backend web skills used to build responsive applications.',
-      items: [
-        { name: 'HTML5', level: 'Advanced' },
-        { name: 'CSS3', level: 'Advanced' },
-        { name: 'FastAPI', level: 'Intermediate' },
-        { name: 'Tailwind', level: 'Intermediate' },
-      ],
-    },
-    {
-      label: 'Data Science Libraries',
-      icon: '◌',
-      summary: 'Libraries for data manipulation, analysis, and modeling.',
-      items: [
-        { name: 'Pandas', level: 'Advanced' },
-        { name: 'NumPy', level: 'Advanced' },
-        { name: 'Scikit-learn', level: 'Intermediate' },
-      ],
-    },
-    {
-      label: 'AI & NLP',
-      icon: '◈',
-      summary: 'Intelligent systems, text processing, and model-driven automation.',
-      items: [
-        { name: 'TensorFlow', level: 'Intermediate' },
-        { name: 'OpenCV', level: 'Intermediate' },
-        { name: 'NLP', level: 'Intermediate' },
-        { name: 'LLM Basics', level: 'Beginner' },
-      ],
-    },
-    {
-      label: 'Machine Learning',
-      icon: '⚡',
-      summary: 'Model development techniques used in predictive systems.',
-      items: [
-        { name: 'Logistic Regression', level: 'Advanced' },
-        { name: 'Random Forest', level: 'Advanced' },
-        { name: 'SVM', level: 'Intermediate' },
-        { name: 'Cross-Validation', level: 'Advanced' },
-      ],
-    },
-    {
-      label: 'Computer Vision',
-      icon: '◉',
-      summary: 'Image processing and object detection systems.',
-      items: [
-        { name: 'CNN', level: 'Advanced' },
-        { name: 'YOLOv3', level: 'Intermediate' },
-        { name: 'Image Processing', level: 'Advanced' },
-        { name: 'Object Detection', level: 'Intermediate' },
-      ],
-    },
-    {
-      label: 'Data Visualization',
-      icon: '◐',
-      summary: 'Creating charts, graphs, and model performance visuals.',
-      items: [
-        { name: 'Matplotlib', level: 'Advanced' },
-        { name: 'Seaborn', level: 'Intermediate' },
-        { name: 'ROC-AUC', level: 'Advanced' },
-        { name: 'Precision-Recall', level: 'Intermediate' },
-      ],
-    },
-    {
-      label: 'Tools & Databases',
-      icon: '⌘',
-      summary: 'Tools and platforms used for development and workflow management.',
-      items: [
-        { name: 'Jupyter Notebook', level: 'Advanced' },
-        { name: 'Git', level: 'Advanced' },
-        { name: 'GitHub', level: 'Advanced' },
-        { name: 'VS Code', level: 'Advanced' },
-        { name: 'MySQL', level: 'Advanced' },
-        { name: 'XAMPP', level: 'Intermediate' },
-      ],
-    },
-    {
-      label: 'Cloud Platforms',
-      icon: '☁',
-      summary: 'Cloud and deployment platforms used to publish applications.',
-      items: [
-        { name: 'Vercel', level: 'Advanced' },
-        { name: 'Render', level: 'Intermediate' },
-        { name: 'AWS EC2', level: 'Intermediate' },
-      ],
-    },
-  ]
+ const skillGroups = [
+  {
+    label: 'Programming Languages',
+    icon: '</>',
+    summary: 'Core programming languages for AI systems and web applications.',
+    items: [
+      { name: 'Python', level: 'Advanced' },
+      { name: 'JavaScript', level: 'Advanced' },
+      { name: 'SQL', level: 'Advanced' },
+      { name: 'TypeScript', level: 'Intermediate' },
+    ],
+  },
+
+  {
+    label: 'AI Agent Engineering',
+    icon: '🤖',
+    summary: 'Building autonomous AI agents with memory, tools, reasoning, and workflows.',
+    items: [
+      { name: 'AI Agents', level: 'Advanced' },
+      { name: 'LangChain', level: 'Intermediate' },
+      { name: 'LangGraph', level: 'Intermediate' },
+      { name: 'Prompt Engineering', level: 'Advanced' },
+      { name: 'Tool Calling', level: 'Intermediate' },
+      { name: 'Agent Workflows', level: 'Intermediate' },
+    ],
+  },
+
+  {
+    label: 'RAG & LLMs',
+    icon: '🧠',
+    summary: 'Developing Retrieval-Augmented Generation systems and LLM-powered applications.',
+    items: [
+      { name: 'RAG', level: 'Advanced' },
+      { name: 'OpenAI API', level: 'Intermediate' },
+      { name: 'Vector Databases', level: 'Intermediate' },
+      { name: 'Embeddings', level: 'Intermediate' },
+      { name: 'Semantic Search', level: 'Intermediate' },
+      { name: 'LLM Applications', level: 'Intermediate' },
+    ],
+  },
+
+  {
+    label: 'Frontend Development',
+    icon: '🎨',
+    summary: 'Building modern, responsive user interfaces.',
+    items: [
+      { name: 'React.js', level: 'Advanced' },
+      { name: 'HTML5', level: 'Advanced' },
+      { name: 'CSS3', level: 'Advanced' },
+      { name: 'Tailwind CSS', level: 'Advanced' },
+      { name: 'JavaScript', level: 'Advanced' },
+    ],
+  },
+
+  {
+    label: 'Backend Development',
+    icon: '⚙️',
+    summary: 'Developing APIs and scalable backend services.',
+    items: [
+      { name: 'FastAPI', level: 'Advanced' },
+      { name: 'Node.js', level: 'Intermediate' },
+      { name: 'REST APIs', level: 'Advanced' },
+      { name: 'Authentication', level: 'Intermediate' },
+      { name: 'MySQL', level: 'Advanced' },
+    ],
+  },
+
+  {
+    label: 'Machine Learning & Computer Vision',
+    icon: '📊',
+    summary: 'Building intelligent models and vision-based systems.',
+    items: [
+      { name: 'TensorFlow', level: 'Intermediate' },
+      { name: 'OpenCV', level: 'Intermediate' },
+      { name: 'YOLO', level: 'Intermediate' },
+      { name: 'CNN', level: 'Intermediate' },
+      { name: 'Scikit-learn', level: 'Intermediate' },
+    ],
+  },
+
+  {
+    label: 'Cloud & Deployment',
+    icon: '☁️',
+    summary: 'Deploying and managing applications in production.',
+    items: [
+      { name: 'AWS EC2', level: 'Intermediate' },
+      { name: 'Vercel', level: 'Advanced' },
+      { name: 'Render', level: 'Intermediate' },
+      { name: 'Docker', level: 'Beginner' },
+    ],
+  },
+
+  {
+    label: 'Developer Tools',
+    icon: '🛠️',
+    summary: 'Tools for development, collaboration, and version control.',
+    items: [
+      { name: 'Git', level: 'Advanced' },
+      { name: 'GitHub', level: 'Advanced' },
+      { name: 'VS Code', level: 'Advanced' },
+      { name: 'Postman', level: 'Intermediate' },
+      { name: 'Jupyter Notebook', level: 'Advanced' },
+    ],
+  },
+];
 
   const dataScienceProjects = [
     {

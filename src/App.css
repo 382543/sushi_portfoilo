@@ -251,7 +251,7 @@ li,
 
 .about-intro h2 {
   margin: 0;
-  color: #131d35;
+  color: #000000;
   font-size: clamp(2.4rem, 5.2vw, 4.6rem);
   line-height: 0.98;
   letter-spacing: -0.05em;
@@ -304,7 +304,7 @@ li,
 }
 
 .about-highlight-card strong {
-  color: #131d35;
+  color: #000000;
   font-size: 1rem;
   line-height: 1.45;
 }
@@ -333,7 +333,7 @@ li,
 
 .about-expertise-card h3 {
   margin: 0;
-  color: #131d35;
+  color: #000000;
   font-size: 1.35rem;
   line-height: 1.15;
   letter-spacing: -0.03em;
@@ -408,7 +408,7 @@ li,
 .research-banner h2,
 .contact-card h2 {
   margin: 0;
-  color: #131d35;
+  color: #000000;
   font-size: clamp(2.2rem, 4.8vw, 4rem);
   line-height: 1;
   letter-spacing: -0.05em;
@@ -463,7 +463,7 @@ li,
 
 .education-content h3 {
   margin: 0;
-  color: #131d35;
+  color: #000000;
   font-size: 1.15rem;
   font-weight: 800;
 }
@@ -529,7 +529,7 @@ li,
 
 .certificate-card h3 {
   margin: 0 0 14px;
-  color: #131d35;
+  color: #000000;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -893,7 +893,7 @@ li,
 }
 
 .coding-card-green {
-  background: linear-gradient(180deg, rgba(58, 201, 158, 0.09) 0%, #ffffff 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.09) 0%, #ffffff 100%);
 }
 
 .research-section {
@@ -949,7 +949,7 @@ li,
 
 .research-spotlight h3 {
   margin: 0;
-  color: #131d35;
+  color: #000000;
   font-size: clamp(1.3rem, 2.2vw, 2rem);
   line-height: 1.2;
 }
@@ -1021,7 +1021,7 @@ li,
   line-height: 0.92;
   font-weight: 800;
   letter-spacing: -0.08em;
-  color: #131d35;
+  color: #000000;
 }
 
 .skills-hero p {
@@ -1106,7 +1106,7 @@ li,
 
 .skill-matrix-card h3 {
   margin: 0;
-  color: #131d35;
+  color: #000000;
   font-size: 1.55rem;
   line-height: 1.1;
   font-weight: 800;
@@ -2029,7 +2029,7 @@ li,
 .certificate-card a,
 .research-spotlight a,
 .contact-links a {
-  background: var(--cloth-green);
+  background: #000000;
   color: #fef5de;
   border: 1px solid #1b334f;
 }
@@ -2202,17 +2202,17 @@ li,
 :root {
   --sun: #f4b400;
   --coral: #e96f5b;
-  --sea: #0f766e;
-  --mint: #ccfbf1;
+  --sea: #000000;
+  --mint: #ffffff;
   --ink: #1f2937;
-  --paper: #fffaf0;
+  --paper: #ffffff;
 }
 
 body {
   background:
-    radial-gradient(circle at 10% 0%, rgba(244, 180, 0, 0.2) 0%, rgba(244, 180, 0, 0) 30%),
-    radial-gradient(circle at 90% 12%, rgba(15, 118, 110, 0.2) 0%, rgba(15, 118, 110, 0) 34%),
-    linear-gradient(180deg, #fff8ed 0%, #fffefb 52%, #f7fffd 100%);
+    radial-gradient(circle at 10% 0%, rgba(244, 180, 0, 0.08) 0%, rgba(244, 180, 0, 0) 30%),
+    radial-gradient(circle at 90% 12%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 34%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 52%, #f5f5f5 100%);
   color: var(--ink);
 }
 
@@ -2229,7 +2229,7 @@ body {
 }
 
 .hero-nav-link {
-  color: #11382f;
+  color: #000000;
   font-weight: 700;
 }
 
@@ -2244,15 +2244,15 @@ body {
 .showcase {
   min-height: clamp(460px, 58vw, 700px);
   background:
-    radial-gradient(circle at 75% 12%, rgba(233, 111, 91, 0.18) 0%, rgba(233, 111, 91, 0) 35%),
-    radial-gradient(circle at 22% 80%, rgba(15, 118, 110, 0.18) 0%, rgba(15, 118, 110, 0) 34%),
-    linear-gradient(180deg, #fff8ec 0%, #fffef9 56%, #f3fffb 100%);
+    radial-gradient(circle at 75% 12%, rgba(233, 111, 91, 0.1) 0%, rgba(233, 111, 91, 0) 35%),
+    radial-gradient(circle at 22% 80%, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 34%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 56%, #f5f5f5 100%);
 }
 
 .blob {
   border-radius: 44% 56% 62% 38% / 45% 42% 58% 55%;
-  background: linear-gradient(135deg, #f88f6e 0%, #ea6f5b 44%, #0f766e 100%);
-  box-shadow: 0 24px 60px rgba(15, 118, 110, 0.3);
+  background: linear-gradient(135deg, #f88f6e 0%, #ea6f5b 44%, #000000 100%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
 }
 
 .showcase-name {
@@ -2262,7 +2262,7 @@ body {
 
 .showcase-left,
 .showcase-right {
-  color: #1f4f44;
+  color: #000000;
 }
 
 .about-section,
@@ -2325,18 +2325,18 @@ body {
 .skills-hero h2,
 .coding-header h2,
 .contact-card h2 {
-  color: #11382f;
+  color: #000000;
 }
 
 .education-marker {
-  background: linear-gradient(180deg, #0f766e 0%, #155e75 100%);
+  background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
 }
 
 .skill-card-icon,
 .coding-card-icon {
   color: var(--sea);
-  background: #e6fffa;
-  border-color: rgba(15, 118, 110, 0.25);
+  background: #f0f0f0;
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .skill-row {
@@ -2355,12 +2355,12 @@ body {
 .project-links .project-link-github,
 .project-card .project-link-github {
   background: var(--sea);
-  border-color: #115e59;
+  border-color: #000000;
 }
 
 .project-links .project-link-github:hover,
 .project-card .project-link-github:hover {
-  background: #115e59;
+  background: #1a1a1a;
 }
 
 .project-links .project-link-live,
