@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Special+Elite&display=swap');
 
+:root {
+  --accent: #4c6a6f;
+  --accent-strong: #6d8a78;
+  --accent-soft: rgba(76, 106, 111, 0.24);
+  --accent-soft-2: rgba(109, 138, 120, 0.2);
+  --accent-glow: rgba(76, 106, 111, 0.14);
+}
+
 body {
   font-family: var(--font-body);
   letter-spacing: -0.01em;
@@ -60,7 +68,7 @@ li,
 }
 
 .hero-nav-link:hover {
-  color: #0e4bcc;
+  color: var(--accent);
   transform: translateY(-1px);
 }
 
@@ -71,7 +79,7 @@ li,
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #2f67ff 0%, #7d6bff 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-strong) 100%);
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.25s ease;
@@ -111,7 +119,7 @@ li,
 .showcase::before {
   width: clamp(260px, 34vw, 460px);
   height: clamp(260px, 34vw, 460px);
-  background: rgba(47, 103, 255, 0.28);
+  background: var(--accent-soft);
   top: -8%;
   left: 8%;
   animation: glowDrift 12s ease-in-out infinite;
@@ -120,7 +128,7 @@ li,
 .showcase::after {
   width: clamp(220px, 28vw, 380px);
   height: clamp(220px, 28vw, 380px);
-  background: rgba(109, 94, 252, 0.22);
+  background: var(--accent-soft-2);
   bottom: -14%;
   right: 12%;
   animation: glowDrift 14s ease-in-out infinite reverse;
@@ -163,7 +171,7 @@ li,
   width: clamp(320px, 43vw, 620px);
   height: clamp(320px, 43vw, 620px);
   border-radius: 24% 28% 22% 26% / 28% 24% 26% 22%;
-  background: #0e7df2;
+  background: var(--accent);
   left: 50%;
   top: 54%;
   z-index: 1;
@@ -213,7 +221,7 @@ li,
 .page-about {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 85% 0%, rgba(57, 111, 255, 0.14) 0%, rgba(255, 255, 255, 0.95) 48%);
+  background: radial-gradient(circle at 85% 0%, rgba(76, 106, 111, 0.14) 0%, rgba(255, 255, 255, 0.95) 48%);
 }
 
 .page-about::after {
@@ -224,7 +232,7 @@ li,
   border-radius: 50%;
   right: -90px;
   top: -90px;
-  background: radial-gradient(circle, rgba(109, 94, 252, 0.24) 0%, rgba(109, 94, 252, 0) 70%);
+  background: radial-gradient(circle, rgba(109, 138, 120, 0.24) 0%, rgba(109, 138, 120, 0) 70%);
   animation: routeFloat 10s ease-in-out infinite;
   pointer-events: none;
 }
@@ -448,7 +456,7 @@ li,
 }
 
 .education-marker {
-  background: linear-gradient(180deg, #0e7df2 0%, #2f67ff 100%);
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
   color: #fff;
   font-size: 1rem;
   font-weight: 800;
@@ -523,7 +531,7 @@ li,
   width: 54px;
   height: 4px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #0e7df2 0%, #6d5efc 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-strong) 100%);
   margin-bottom: 14px;
 }
 
@@ -827,7 +835,7 @@ li,
   place-items: center;
   background: #f5f8ff;
   border: 1px solid #e6ecff;
-  color: #2f67ff;
+  color: var(--accent);
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -871,7 +879,7 @@ li,
   border-radius: 50%;
   display: grid;
   place-items: center;
-  color: #2f67ff;
+  color: var(--accent);
   border: 1px solid #e4eaf8;
   background: #fff;
 }
@@ -1100,7 +1108,7 @@ li,
   place-items: center;
   font-size: 1.5rem;
   background: #f6f8ff;
-  color: #2f67ff;
+  color: var(--accent);
   flex: 0 0 auto;
 }
 
@@ -1277,13 +1285,13 @@ li,
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #2f67ff;
-  box-shadow: 0 0 0 8px rgba(47, 103, 255, 0.14);
+  background: var(--accent);
+  box-shadow: 0 0 0 8px var(--accent-glow);
 }
 
 .projects-group-web .section-head h2::before {
-  background: #6d5efc;
-  box-shadow: 0 0 0 8px rgba(109, 94, 252, 0.14);
+  background: var(--accent-strong);
+  box-shadow: 0 0 0 8px rgba(109, 138, 120, 0.14);
 }
 
 .project-card {
