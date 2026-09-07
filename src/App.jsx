@@ -194,7 +194,7 @@ function App() {
         'Analyzed more than 400 clinical records to develop a predictive model for early Chronic Kidney Disease detection. Performed preprocessing, feature scaling, and correlation analysis, then implemented Logistic Regression and Random Forest with 5-fold cross-validation.',
       stack: 'Python, Machine Learning, Logistic Regression, Random Forest, ROC-AUC',
       link: 'https://github.com/382543/your-ckd-repo',
-      live: '#',
+      live: 'https://sdp-project-3-t6sp.onrender.com/',
     },
     {
       title: 'Credit Card Fraud Detection',
@@ -202,7 +202,7 @@ function App() {
         'Built machine learning models on an imbalanced transaction dataset for fraud detection. Applied class weighting techniques to improve recall for fraudulent cases and measured robustness with ROC-AUC and Precision-Recall curve analysis.',
       stack: 'Python, Machine Learning, Imbalanced Learning, Precision-Recall Analysis',
       link: 'https://github.com/382543/credit-card-fraud-detection',
-      live: '#',
+      live: '',
     },
   ]
 
@@ -488,9 +488,15 @@ function App() {
               <a className="project-link project-link-github" href={project.link} target="_blank" rel="noreferrer">
                 GitHub
               </a>
-              <a className="project-link project-link-live" href={project.live} target="_blank" rel="noreferrer">
-                Live Demo
-              </a>
+              {project.live ? (
+                <a className="project-link project-link-live" href={project.live} target="_blank" rel="noreferrer">
+                  Live Demo
+                </a>
+              ) : (
+                <span className="project-link project-link-live" aria-disabled="true" title="Live demo not available">
+                  Live Demo
+                </span>
+              )}
             </div>
           </article>
         ))}
