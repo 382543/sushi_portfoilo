@@ -201,7 +201,7 @@ function App() {
       description:
         'Built machine learning models on an imbalanced transaction dataset for fraud detection. Applied class weighting techniques to improve recall for fraudulent cases and measured robustness with ROC-AUC and Precision-Recall curve analysis.',
       stack: 'Python, Machine Learning, Imbalanced Learning, Precision-Recall Analysis',
-      link: 'https://github.com/382543/credit-card-fraud-detection',
+      link: 'https://github.com/382543/cridet-card-fraud-detection',
       live: '',
     },
   ]
