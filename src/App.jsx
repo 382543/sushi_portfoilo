@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import heroImg from './assets/sushi.png'
+import webDeveloperResume from '../pdf/Software (3).pdf'
+import aiEngineerResume from '../pdf/ai_engineer (2).pdf'
 import './App.css'
 
 function App() {
@@ -9,6 +11,33 @@ function App() {
   const roleVariants = [
     { line1: 'Full Stack', line2: 'Developer' },
     { line1: 'AI ', line2: 'Engineer' },
+  ]
+
+  const resumeProfiles = [
+    {
+      slug: 'web-developer',
+      title: 'Web Developer',
+      pdf: webDeveloperResume,
+      summary: 'Web developer building reliable, user-focused full-stack applications.',
+      skills: 'React.js, JavaScript, FastAPI, Node.js, REST APIs, MySQL, AWS',
+      experience: 'Built responsive React interfaces and scalable backend APIs, with experience deploying applications to AWS and Vercel.',
+    },
+    {
+      slug: 'ai-engineer',
+      title: 'AI Engineer',
+      pdf: aiEngineerResume,
+      summary: 'AI engineer developing intelligent products with agents, RAG, and machine learning.',
+      skills: 'Python, AI Agents, RAG, LangChain, LLMs, Vector Databases, Scikit-learn',
+      experience: 'Designed AI agent workflows and machine learning systems for prediction, sentiment analysis, retrieval, and personalized recommendations.',
+    },
+    {
+      slug: 'software-developer',
+      title: 'Software Developer',
+      pdf: webDeveloperResume,
+      summary: 'Software developer building reliable, user-focused full-stack applications.',
+      skills: 'Python, FastAPI, TensorFlow, OpenCV, Pandas, Scikit-learn, SQL',
+      experience: 'Developed Python APIs and predictive models, including fraud detection, health risk prediction, and computer vision applications.',
+    },
   ]
 
   const [roleIndex, setRoleIndex] = useState(0)
@@ -379,6 +408,7 @@ function App() {
   const navItems = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About me' },
+    { to: '/resume/web-developer', label: 'Resume' },
     { to: '/education', label: 'Education' },
     { to: '/projects', label: 'Projects' },
     { to: '/skills', label: 'Skills' },
@@ -401,24 +431,19 @@ function App() {
   ]
 
   useEffect(() => {
-    const previousPath = previousPathRef.current
-    const nextPath = location.pathname
+    previousPathRef.current = location.pathname
+  }, [location.pathname])
 
-    if (previousPath === nextPath) {
-      return
-    }
-
-    const previousIndex = routeSequence.indexOf(previousPath)
+  const handleNavigation = (nextPath) => {
+    const previousIndex = routeSequence.indexOf(location.pathname)
     const nextIndex = routeSequence.indexOf(nextPath)
 
-    if (previousIndex !== -1 && nextIndex !== -1) {
-      setSwipeDirection(nextIndex >= previousIndex ? 'forward' : 'backward')
-    } else {
-      setSwipeDirection('forward')
-    }
-
-    previousPathRef.current = nextPath
-  }, [location.pathname])
+    setSwipeDirection(
+      previousIndex !== -1 && nextIndex !== -1 && nextIndex < previousIndex
+        ? 'backward'
+        : 'forward',
+    )
+  }
 
   const sectionTitle = {
     '/': 'Home',
@@ -430,6 +455,15 @@ function App() {
     '/coding-platform': 'Coding Platform',
     '/research': 'Research',
     '/keep-in-touch': 'Keep in Touch',
+  }
+
+  const downloadResume = (profile) => {
+    const link = document.createElement('a')
+    link.href = profile.pdf
+    link.target = '_blank'
+    link.rel = 'noreferrer'
+    link.download = `${profile.slug}-resume.pdf`
+    link.click()
   }
 
   const filteredSkillGroups = skillGroups.filter((group) => {
@@ -514,7 +548,7 @@ function App() {
         'projects-group-data',
       )}
       {renderProjectGroup(
-        'Web Development Projects',
+        'Ai engineer Projects',
         'Selected work in full-stack web development, deployment, and interactive experiences.',
         webDevelopmentProjects,
         6,
@@ -759,6 +793,35 @@ function App() {
         </p>
       </section>
 
+      <section className="resume-section reveal-2" aria-labelledby="resume-heading">
+        <div className="resume-heading">
+          <span className="about-eyebrow">Resume</span>
+          <h2 id="resume-heading">Choose a role to explore.</h2>
+          <p>View a focused resume or download a copy for the role you are hiring for.</p>
+        </div>
+        <div className="resume-options">
+          {resumeProfiles.map((profile) => (
+            <article className="resume-option" key={profile.slug}>
+              <h3>{profile.title}</h3>
+              <p>{profile.summary}</p>
+              <div className="resume-actions">
+                <a
+                  className="resume-view-button"
+                  href={profile.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View PDF
+                </a>
+                <button className="resume-download-button" type="button" onClick={() => downloadResume(profile)}>
+                  Download
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="about-section home-about reveal-2">
         <div className="about-intro">
           <span className="about-eyebrow">About</span>
@@ -805,6 +868,7 @@ function App() {
               className={({ isActive }) =>
                 isActive ? 'hero-nav-link hero-nav-link-active' : 'hero-nav-link'
               }
+              onClick={() => handleNavigation(item.to)}
             >
               {item.label}
             </NavLink>
@@ -816,6 +880,62 @@ function App() {
         <Routes location={location}>
         <Route path="/" element={renderHomeContent()} />
         <Route path="/home" element={<Navigate to="/" replace />} />
+
+        <Route
+          path="/resume/:resumeSlug"
+          element={
+            <section className="resume-page resume-section reveal-2">
+              {(() => {
+                const profile = resumeProfiles.find((item) => item.slug === location.pathname.split('/').pop())
+
+                if (!profile) {
+                  return <Navigate to="/" replace />
+                }
+
+                return (
+                  <>
+                    <div className="resume-heading">
+                      <span className="about-eyebrow">Resume</span>
+                      <h2>{profile.title}</h2>
+                      <p>{profile.summary}</p>
+                      <div className="resume-actions">
+                        <a
+                          className="resume-view-button"
+                          href={profile.pdf}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          View PDF
+                        </a>
+                        <button className="resume-download-button" type="button" onClick={() => downloadResume(profile)}>
+                          Download resume
+                        </button>
+                        <NavLink className="resume-back-link" to="/">Back to portfolio</NavLink>
+                      </div>
+                    </div>
+                    <div className="resume-content-grid">
+                      <article className="resume-content-block">
+                        <span>Core skills</span>
+                        <h3>What I bring</h3>
+                        <p>{profile.skills}</p>
+                      </article>
+                      <article className="resume-content-block">
+                        <span>Experience highlight</span>
+                        <h3>Recent work</h3>
+                        <p>{profile.experience}</p>
+                      </article>
+                      <article className="resume-content-block">
+                        <span>Education</span>
+                        <h3>Computer Science</h3>
+                        <p>B.Tech in Computer Science and Engineering, VIT Andhra Pradesh, 2022 - 2026.</p>
+                      </article>
+                    </div>
+                  </>
+                )
+              })()}
+            </section>
+          }
+        />
 
         <Route
           path="/about"
